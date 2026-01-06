@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:harry_potter/src/view/personagem_detalhe/personagem_detalhe_view.dart';
+import 'package:harry_potter/src/view/detalhes_views/personagem_detalhe_view.dart';
 import 'package:harry_potter/src/viewModel/personagens_view_model.dart';
-import 'package:harry_potter/src/widgets/casas_dropdown.dart';
+import 'package:harry_potter/src/widgets/house_dropdown.dart';
 import 'package:harry_potter/src/widgets/personagem_card.dart';
 import 'package:provider/provider.dart';
 
@@ -41,7 +41,7 @@ class _PersonagensViewState extends State<PersonagensView> {
           Row(
             children: [
               Expanded(
-                child: CasasDropdown(
+                child: HouseDropdown(
                   value: viewModel.casaSelecionada,
                   onChanged: (casa) {
                     context.read<PersonagensViewModel>().filterByHouse(casa);
@@ -63,7 +63,8 @@ class _PersonagensViewState extends State<PersonagensView> {
               itemCount: viewModel.personagensFiltrados.length,
               itemBuilder: (context, index) {
                 final personagem = viewModel.personagensFiltrados[index];
-                return GestureDetector(
+                return PersonagemCard(
+                  personagem: personagem,
                   onTap: () {
                     Navigator.push(
                       context,
@@ -73,7 +74,6 @@ class _PersonagensViewState extends State<PersonagensView> {
                       ),
                     );
                   },
-                  child: PersonagemCard(personagem: personagem),
                 );
               },
             ),

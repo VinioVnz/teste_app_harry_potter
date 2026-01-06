@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class CasasDropdown extends StatelessWidget {
+class HouseDropdown extends StatelessWidget {
   final String value;
   final ValueChanged<String> onChanged;
 
-  const CasasDropdown({
+  const HouseDropdown({
     super.key,
     required this.value,
     required this.onChanged,
@@ -27,10 +27,10 @@ class CasasDropdown extends StatelessWidget {
       ),
       items: const [
         DropdownMenuItem(value: 'all', child: Text('Todas')),
-        DropdownMenuItem(value: 'Gryffindor', child: Text('Gryffindor')),
-        DropdownMenuItem(value: 'Slytherin', child: Text('Slytherin')),
-        DropdownMenuItem(value: 'Ravenclaw', child: Text('Ravenclaw')),
-        DropdownMenuItem(value: 'Hufflepuff', child: Text('Hufflepuff')),
+        DropdownMenuItem(value: 'Gryffindor', child: Text('Grifnória')),
+        DropdownMenuItem(value: 'Slytherin', child: Text('Sonserina')),
+        DropdownMenuItem(value: 'Ravenclaw', child: Text('Cornival')),
+        DropdownMenuItem(value: 'Hufflepuff', child: Text('Lufa-Lufa')),
       ],
       onChanged: (value) {
         if (value != null) onChanged(value);

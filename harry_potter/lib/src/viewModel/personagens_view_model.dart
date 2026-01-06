@@ -5,7 +5,7 @@ import 'package:harry_potter/src/service/hp_api_service.dart';
 class PersonagensViewModel extends ChangeNotifier {
   final HpApiService service;
 
-  PersonagensViewModel(this.service);
+  PersonagensViewModel({required this.service});
   String casaSelecionada = 'all';
   List<PersonagemModel> personagensFiltrados = [];
   List<PersonagemModel> personagens = [];
