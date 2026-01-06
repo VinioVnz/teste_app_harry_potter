@@ -20,7 +20,7 @@ class MagiaDetalheView extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Center(
-              child: FaIcon(RandomIcon.getRandomIcon(), size: 80, color: Colors.deepPurple),
+              child: FaIcon(RandomIcon.getRandomIcon(), size: 80, color: Color(0xff440719)),
             ),
             const SizedBox(height: 24),
 
@@ -31,7 +31,7 @@ class MagiaDetalheView extends StatelessWidget {
                 style: const TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
-                  color: Colors.deepPurple,
+                  color: Color(0xff440719),
                 ),
               ),
             ),
