@@ -10,7 +10,7 @@ class CustomDrawer extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            color: Theme.of(context).colorScheme.primary,
+            color: Theme.of(context).primaryColor,
             height: 100,
             alignment: Alignment.center,
             child: Padding(

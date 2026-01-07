@@ -14,16 +14,13 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     final viewModel = context.watch<ThemeViewModel>();
+    final isDark = Theme.of(context).brightness == Brightness.dark;
     return AppBar(
       title: Text(title, style: TextStyle(fontSize: 35)),
       centerTitle: true,
       actions: [
         IconButton(
-          icon: Icon(
-            viewModel.themeMode == ThemeMode.dark
-                ? Icons.dark_mode
-                : Icons.light_mode,
-          ),
+          icon: Icon(isDark ? Icons.dark_mode : Icons.light_mode),
           onPressed: () {
             viewModel.toggleTheme();
           },

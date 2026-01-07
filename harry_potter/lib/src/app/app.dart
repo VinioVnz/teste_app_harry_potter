@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:harry_potter/src/app/app_routes.dart';
+import 'package:harry_potter/src/view/animation/animation_view.dart';
 import 'package:harry_potter/src/viewModel/theme_view_model.dart';
 import 'package:provider/provider.dart';
 
@@ -13,8 +14,11 @@ class App extends StatelessWidget {
     return MaterialApp(
       title: "App Teste da W2O",
       debugShowCheckedModeBanner: false,
-      initialRoute: '/home',
-      routes: generateRoutes(),
+      initialRoute: '/',
+      routes: {
+        '/' : (_) => const AnimationView(),
+        ...generateRoutes(),
+      },
 
       themeMode: themeViewModel.themeMode,
 

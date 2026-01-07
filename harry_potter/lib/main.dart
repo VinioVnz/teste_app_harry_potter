@@ -7,6 +7,15 @@ import 'package:harry_potter/src/viewModel/theme_view_model.dart';
 import 'package:provider/provider.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  final brightness =
+      WidgetsBinding.instance.platformDispatcher.platformBrightness;
+
+  final initialTheme = brightness == Brightness.dark
+      ? ThemeMode.dark
+      : ThemeMode.light;
+
   runApp(
     MultiProvider(
       providers: [
@@ -16,9 +25,7 @@ void main() {
         ChangeNotifierProvider(
           create: (_) => MagiaViewModel(service: HpApiService()),
         ),
-        ChangeNotifierProvider(
-          create: (_) => ThemeViewModel(),
-        ),
+        ChangeNotifierProvider(create: (_) => ThemeViewModel(initialTheme)),
       ],
       child: const App(),
     ),
