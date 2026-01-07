@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:harry_potter/src/app/app_routes.dart';
-import 'package:harry_potter/src/view/casas_view.dart';
-import 'package:harry_potter/src/view/home_view.dart';
-import 'package:harry_potter/src/view/magia_view.dart';
-import 'package:harry_potter/src/view/personagens_view.dart';
 import 'package:harry_potter/src/viewModel/theme_view_model.dart';
 import 'package:provider/provider.dart';
 

@@ -3,9 +3,9 @@ import 'package:harry_potter/src/model/personagem_model.dart';
 import 'package:harry_potter/src/utils/casas_name.dart';
 
 class PersonagemCard extends StatelessWidget {
-  PersonagemModel personagem;
+  final PersonagemModel personagem;
   final VoidCallback? onTap;
-  PersonagemCard({super.key, required this.personagem, this.onTap});
+  const PersonagemCard({super.key, required this.personagem, this.onTap});
 
   @override
   Widget build(BuildContext context) {
