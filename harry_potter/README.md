@@ -14,6 +14,7 @@ Aplicativo em **Flutter** feito para teste da empresa W2O
 * Navegação entre telas de listagem e detalhes
 * Componentes reutilizáveis (cards, appbar, drawer)
 * Interface responsiva e opção de tema escuro e claro
+* Animação na entrada do app
 * Testes unitários de ViewModels
 
 ---
@@ -26,6 +27,13 @@ Aplicativo em **Flutter** feito para teste da empresa W2O
 * Consumo de API REST
 * Testes unitários com **flutter_test**
 
+---
+
+## Pacotes
+
+* **Http**
+* **Provider**
+* **Font Awesome**
 ---
 
 ## Estrutura do Projeto
@@ -59,6 +67,8 @@ Aplicativo em **Flutter** feito para teste da empresa W2O
  ┃ ┃   ┣ 📄 casas_detalhe_view.dart
  ┃ ┃   ┣ 📄 magia_detalhe_view.dart
  ┃ ┃   ┗ 📄 personagem_detalhe_view.dart
+ ┃ ┃ ┗ 📁 animation/
+ ┃ ┃   ┣ 📄 animation_view.dart
  ┃ ┣ 📁 viewModel/
  ┃ ┃ ┣ 📄 magia_view_model.dart
  ┃ ┃ ┣ 📄 personagens_view_model.dart
