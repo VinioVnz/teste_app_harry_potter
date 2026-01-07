@@ -28,7 +28,7 @@ class HouseCard extends StatelessWidget {
               const SizedBox(height: 8),
               Text(
                 houseName,
-                style: const TextStyle(fontWeight: FontWeight.bold),
+                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
               ),
             ],
           ),

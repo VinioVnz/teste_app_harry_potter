@@ -22,7 +22,7 @@ class MagiaCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              FaIcon(RandomIcon.getRandomIcon(), size: 48, color: Color(0xff440719)),
+              FaIcon(RandomIcon.getRandomIcon(), size: 48, color: Theme.of(context).colorScheme.primary),
               const SizedBox(height: 8),
               Text(
                 magia.name,

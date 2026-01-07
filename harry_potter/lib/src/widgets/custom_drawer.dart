@@ -10,7 +10,7 @@ class CustomDrawer extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            color: Color(0xff440719),
+            color: Theme.of(context).colorScheme.primary,
             height: 100,
             alignment: Alignment.center,
             child: Padding(
@@ -20,13 +20,15 @@ class CustomDrawer extends StatelessWidget {
                   'assets/images/harry_icon.png',
                   width: 100,
                   height: 100,
-                  color: Color(0xffE09C09),
+                  color: Theme.of(context).colorScheme.secondary,
                 ),
               ),
             ),
           ),
            ...appMenuItems.map(
             (item) => ListTile(
+              textColor: Theme.of(context).colorScheme.primary,
+              iconColor: Theme.of(context).colorScheme.primary,
               leading: Icon(item.icon),
               title: Text(item.title),
               onTap: () {

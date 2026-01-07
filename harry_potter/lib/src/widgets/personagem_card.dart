@@ -34,13 +34,13 @@ class PersonagemCard extends StatelessWidget {
                 personagem.name,
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
-                style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+                style: TextStyle(fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 4),
               Text(
                 houseNamePtBr(personagem.house),
-                style: const TextStyle(
-                  color: Colors.black54,
+                style: TextStyle(
+                  
                   fontWeight: FontWeight.bold,
                 ),
               ),

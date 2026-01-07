@@ -14,15 +14,15 @@ class HouseDropdown extends StatelessWidget {
   Widget build(BuildContext context) {
     return DropdownButtonFormField<String>(
       value: value,
-      decoration: const InputDecoration(
+      decoration: InputDecoration(
         border: OutlineInputBorder(),
         labelText: 'Casa',
-        labelStyle: TextStyle(color: Color(0xff440719)),
+        labelStyle: TextStyle(color: Theme.of(context).colorScheme.primary),
         enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Color(0xff440719)),
+          borderSide: BorderSide(color: Theme.of(context).colorScheme.primary),
         ),
         focusedBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Color(0xff440719), width: 2),
+          borderSide: BorderSide(color: Theme.of(context).colorScheme.primary, width: 2),
         ),
       ),
       items: const [
